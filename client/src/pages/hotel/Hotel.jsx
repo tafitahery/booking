@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Header from '../../components/header/Header';
 import Navbar from '../../components/navbar/Navbar';
+import MailList from '../../components/mailList/MailList';
+import Footer from '../../components/footer/Footer';
 import './hotel.css';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
@@ -32,6 +34,7 @@ export default function Hotel() {
       <Header type="list" />
       <div className="hotelContainer">
         <div className="hotelWrapper">
+          <button className="bookNow">Reserve or Book Now!</button>
           <h1 className="hotelTitle">Grand Hotel</h1>
           <div className="hotelAddress">
             <FontAwesomeIcon icon={faLocationDot} />
@@ -50,28 +53,38 @@ export default function Hotel() {
               </div>
             ))}
           </div>
-          <div className="hotelDtails">
-            <div className="hotelDetailsText">
-              <div className="hotelDetailsTexts">
-                <h1 className="hotelTitle">Stay in the hart of Krakow</h1>
-                <p className="hotelDesk">
-                  Located at 5 minutes walk from St. Florian's Gate in Krakow,
-                  Tower Street Apartments has accommodations with air
-                  conditioning and free Wifi. The units come with hardwood
-                  floors and feature a fully equipped kitchenette with a
-                  microwave, a flat-screen TV, and private bathroom with shower
-                  and a hairdryer. A fridge is also offered, as well as electric
-                  tea pot and a coffee machine. Popular points of interst near
-                  the apartment include Cloth Hall, Main Market Square and Town
-                  Fall Tower. The nearest airport is Jhon Paul II international
-                  Krakow-Balice, 16.1 km from Tower Street Apartments, and the
-                  property offers a paid airport shuttle service.
-                </p>
-              </div>
-              <div className="hotelDetailsPrice"></div>
+          <div className="hotelDetails">
+            <div className="hotelDetailsTexts">
+              <h1 className="hotelTitle">Stay in the hart of Krakow</h1>
+              <p className="hotelDesk">
+                Located at 5 minutes walk from St. Florian's Gate in Krakow,
+                Tower Street Apartments has accommodations with air conditioning
+                and free Wifi. The units come with hardwood floors and feature a
+                fully equipped kitchenette with a microwave, a flat-screen TV,
+                and private bathroom with shower and a hairdryer. A fridge is
+                also offered, as well as electric tea pot and a coffee machine.
+                Popular points of interst near the apartment include Cloth Hall,
+                Main Market Square and Town Fall Tower. The nearest airport is
+                Jhon Paul II international Krakow-Balice, 16.1 km from Tower
+                Street Apartments, and the property offers a paid airport
+                shuttle service.
+              </p>
+            </div>
+            <div className="hotelDetailsPrice">
+              <h1>Perfect for a 9-night stay!</h1>
+              <span>
+                Located in the real heart of Krakov, this property is an
+                excellent location score of 9.8!
+              </span>
+              <h2>
+                <b>$945</b> (9 night)
+              </h2>
+              <button>Reserve or Book now</button>
             </div>
           </div>
         </div>
+        <MailList />
+        <Footer />
       </div>
     </div>
   );
